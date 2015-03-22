@@ -22,7 +22,7 @@ void loop(){
   //  turn on the LED
 
   // Every 15 ms, print the value of the capacitive sensor
-  if ( (millis() % 30) == 0){
+  if ( (millis() % 15) == 0){
 
     if (readCapacitivePin(capSensePin) > touchedCutoff){
       digitalWrite(LEDPin, HIGH);
@@ -51,6 +51,9 @@ void loop(){
   }
 }
 
+/////////////////////////////
+/////----FUNCTIONS----//////
+///////////////////////////
 // readCapacitivePin
 //  Input: Arduino pin number
 //  Output: A number, from 0 to 17 expressing
